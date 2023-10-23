@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const listbarang = ['sabun', 'shampoo', 'deterjen'];
+        const listharga = [1500, 20000, 25000];
+
+        let barang = ""
+
+        console.log('kode barang');
+        for (i in listbarang){
+            console.log(`kode barang: ${i} = ${listbarang[i]}`);
+        }
+        for (i in listharga){
+            console.log(`list harga barang: ${listharga[i]} = ${listbarang[i]}`);
+        }
+        let Totalharga = Number();
+        let kode_barang = prompt("Kode barang anda: ");
+        let jumlah_barang = prompt("Banyak barang yang anda beli: ")
+        if (kode_barang == 0) {
+            Totalharga += listharga[0] * jumlah_barang;
+            barang = listbarang[0]
+        } else if (kode_barang == 1) {
+            Totalharga += listharga[1] * jumlah_barang;
+            barang = listbarang[1]
+        } else if (kode_barang == 2) {
+            Totalharga += listharga[2] * jumlah_barang;
+            barang = listbarang[2]
+        }
+        console.log(`Total Harga barang: ${Totalharga}`)
+        let bayar = prompt(`Nominal yang anda bayar: `)
+
+        if(bayar >= Totalharga){
+            console.log("Transaksi anda berhasil")
+            console.log(`Barang yang telah di beli ${barang}`)
+            let kembalian = bayar - Totalharga
+            if (kembalian != 0){
+                console.log(`Kembalian anda: ${kembalian}`)
+            } else {
+                console.log('Nominal yang anda bayar pas')
+            }
+        } else {
+            console.log("Nominal yang anda bayar tidak cukup!")
+        }
+        </script>
+</body>
+</html>

@@ -8,6 +8,7 @@
     scroll-behavior: smooth;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
+    outline: solid 2px green;
 }
 body {
     background-color: #262e3e;
@@ -26,7 +27,7 @@ header nav {
 }
 nav{
     background-color: #4942E4;
-    transition: 0.2s;
+    transition: 0.2s ease-in-out;
     height: 80px;
 }
 .nav-img{
@@ -51,7 +52,7 @@ nav ul li a{
     color: #C4B0FF;
     text-decoration: none;
 }
-#active{
+.active{
     width: 75px;
     height: 60px;
     color: #FB2576;
@@ -68,9 +69,9 @@ nav ul li a{
 }
 .blurnav{
     border: none;
-    background-color: #4a42e49d;
+    background-color: #4a42e485;
     backdrop-filter: blur(10px);
-    transition: 0.2s;
+    transition: 0.2s ease-in-out;
 }
 @media only screen and (max-width:952px) {
     label.logo{
@@ -283,7 +284,6 @@ nav ul li a{
 .exprience-header{
     position: relative;
     margin-top: 45px;
-    background-color: red;
 }
 .exprience-header::after{
     content: "";
@@ -292,55 +292,25 @@ nav ul li a{
     color: white;
     position: absolute;
 }
+.codeexprience{
+    padding: 25px;
+    width: 50%;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.exprience-icon{
+    align-content: center;
+    width: 25px;
+    fill: white;
+}
+.code{
+    width: fit-content;
+}
 /*----------------------------{End of About}-------------------------- */
 /* ---------------------------{Project_Page}-------------------------- */
-.project h1{
-    color: rgba(221, 214, 214);
-    background-color: #4942E4;
-    width: 100%;
-    position: relative;
-    margin-left: 8em;
-}
 /* -------------------------{End of Project_Page}---------------------- */
 /* ----------------------------{Contact_Page}-------------------------- */
-.contact_introduction{
-    position: relative;
-    top: 5em;
-    left: 25em;
-    color: white;
-    text-decoration: none;
-}
-.whatsapp_contact{
-    width: 19rem;
-    height: 5rem;
-    background-color: rgba(79, 42, 163, 0.548);
-    top: 18em;
-    position: relative;
-    left: 14em;
-    border-radius: 20px;
-}
-.contact_main img{
-    border-radius: 30px;
-    width: 65px;
-    top: 9px;
-    left: 10px;
-    height: 65px;
-    position: relative;
-    text-decoration: none;
-}
-.whatsapp_contact h2{
-    color: azure;
-    position: relative;
-    bottom: 73.5px;
-    left: 85px;
-}
-.whatsapp_contact h1{
-    position: relative; 
-    bottom: 5.5em;
-    left: 60px;
-    color: azure;
-    font-size: 20px;
-}
 /*-------------------------------{END of Contact_Page}------------------------- */
 /*-----------------------------------{RESPONSIVE}------------------------------ */
 .checkbtn{

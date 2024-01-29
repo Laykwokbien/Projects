@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let kasir = ""
+        let jam = date.getHours();
+
+        console.log(jam);
+
+        if (jam >= 20){
+            kasir = "John"
+        } else if (jam >= 15){
+            kasir = "Izawa"
+        } else if (jam >= 12){
+            kasir = "Oriyama"
+        } else if (jam >= 8){
+            kasir = "Naruto"
+        }
+
+        let barang = prompt('Barang yang anda beli: ');
+        let harga = prompt("Harga barang: ");
+        let Totalbarang = prompt('Jumlah barang yang anda beli: ');
+        let Totalharga = harga * Totalbarang
+
+        console.log(`${kasir}(Kasir): Total harga barang anda: ${Totalharga} \n Silakan bayar dengan nominal yang anda inginkan!`);
+        
+        let bayar = prompt("Nominal yang anda bayar: ");
+        
+        
+        
+        if (bayar >= Totalharga){
+            console.log(`Kasir: ${kasir}`)
+            console.log(`Barang Anda beli: ${barang}`)
+            console.log(`Jumlah barang: ${Totalbarang}`)
+            console.log("Transaksi Berhasil. Silakan ambil barang anda");
+            let kembalian = bayar - Totalharga
+            if (kembalian != 0){
+                console.log(`Kembalian: ${kembalian}`);
+            } else{
+                console.log("Nominal yang anda bayar pas");
+            }
+            console.log("Achievement acquired: Shopping for First Time!")
+        } else{
+            console.log("Nominal tidak cukup!");
+        }
+
+    </script>
+</body>
+</html>
